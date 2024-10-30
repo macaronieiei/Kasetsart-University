@@ -21,7 +21,7 @@ def vertical_projection(binary_image):
     projection = np.sum(img_array == 0, axis=0)
     return projection
 
-def segment_characters_modified(projection, min_width=2, threshold=1):
+def segment_characters_modified(projection, min_width=5, threshold=5):
     segments = []
     in_character = False
     start_index = 0
@@ -57,61 +57,61 @@ def get_character_pattern(image_path, target_size=(40, 40)):
 
 def load_character_patterns():
     char_images = {
-        '0': 'D:\\pythonWa\\number\\0.jpg',
-        '1': 'D:\\pythonWa\\number\\1.jpg',
-        '2': 'D:\\pythonWa\\number\\2.jpg',
-        '3': 'D:\\pythonWa\\number\\3.jpg',
-        '4': 'D:\\pythonWa\\number\\4.jpg',
-        '5': 'D:\\pythonWa\\number\\5.jpg',
-        '6': 'D:\\pythonWa\\number\\6.jpg',
-        '7': 'D:\\pythonWa\\number\\7.jpg',
-        '8': 'D:\\pythonWa\\number\\8.jpg',
-        '9': 'D:\\pythonWa\\number\\9.jpg',
+        '0': 'D:\\KU KPS\\Comvision\\License Plate Recognition\\Number\\0.jpg',
+        '1': 'D:\\KU KPS\\Comvision\\License Plate Recognition\\Number\\1.jpg',
+        '2': 'D:\\KU KPS\\Comvision\\License Plate Recognition\\Number\\2.jpg',
+        '3': 'D:\\KU KPS\\Comvision\\License Plate Recognition\\Number\\3.jpg',
+        '4': 'D:\\KU KPS\\Comvision\\License Plate Recognition\\Number\\4.jpg',
+        '5': 'D:\\KU KPS\\Comvision\\License Plate Recognition\\Number\\5.jpg',
+        '6': 'D:\\KU KPS\\Comvision\\License Plate Recognition\\Number\\6.jpg',
+        '7': 'D:\\KU KPS\\Comvision\\License Plate Recognition\\Number\\7.jpg',
+        '8': 'D:\\KU KPS\\Comvision\\License Plate Recognition\\Number\\8.jpg',
+        '9': 'D:\\KU KPS\\Comvision\\License Plate Recognition\\Number\\9.jpg',
 
-        'ก': 'D:\\pythonWa\\Letter\\01.jpg',
-        'ข': 'D:\\pythonWa\\Letter\\02.jpg',
-        'ฃ': 'D:\\pythonWa\\Letter\\03.jpg',
-        'ค': 'D:\\pythonWa\\Letter\\04.jpg',
-        'ฅ': 'D:\\pythonWa\\Letter\\05.jpg',
-        'ฆ': 'D:\\pythonWa\\Letter\\06.jpg',
-        'ง': 'D:\\pythonWa\\Letter\\07.jpg',
-        'จ': 'D:\\pythonWa\\Letter\\08.jpg',
-        'ฉ': 'D:\\pythonWa\\Letter\\09.jpg',
-        'ช': 'D:\\pythonWa\\Letter\\10.jpg',
-        'ซ': 'D:\\pythonWa\\Letter\\11.jpg',
-        'ฌ': 'D:\\pythonWa\\Letter\\12.jpg',
-        'ญ': 'D:\\pythonWa\\Letter\\13.jpg',
-        'ฎ': 'D:\\pythonWa\\Letter\\14.jpg',
-        'ฏ': 'D:\\pythonWa\\Letter\\15.jpg',
-        'ฐ': 'D:\\pythonWa\\Letter\\16.jpg',
-        'ฑ': 'D:\\pythonWa\\Letter\\17.jpg',
-        'ฒ': 'D:\\pythonWa\\Letter\\18.jpg',
-        'ณ': 'D:\\pythonWa\\Letter\\19.jpg',
-        'ด': 'D:\\pythonWa\\Letter\\20.jpg',
-        'ต': 'D:\\pythonWa\\Letter\\21.jpg',
-        'ถ': 'D:\\pythonWa\\Letter\\22.jpg',
-        'ท': 'D:\\pythonWa\\Letter\\23.jpg',
-        'ธ': 'D:\\pythonWa\\Letter\\24.jpg',
-        'น': 'D:\\pythonWa\\Letter\\25.jpg',
-        'บ': 'D:\\pythonWa\\Letter\\26.jpg',
-        'ป': 'D:\\pythonWa\\Letter\\27.jpg',
-        'ผ': 'D:\\pythonWa\\Letter\\28.jpg',
-        'ฝ': 'D:\\pythonWa\\Letter\\29.jpg',
-        'พ': 'D:\\pythonWa\\Letter\\30.jpg',
-        'ฟ': 'D:\\pythonWa\\Letter\\31.jpg',
-        'ภ': 'D:\\pythonWa\\Letter\\32.jpg',
-        'ม': 'D:\\pythonWa\\Letter\\33.jpg',
-        'ย': 'D:\\pythonWa\\Letter\\34.jpg',
-        'ร': 'D:\\pythonWa\\Letter\\35.jpg',
-        'ล': 'D:\\pythonWa\\Letter\\36.jpg',
-        'ว': 'D:\\pythonWa\\Letter\\37.jpg',
-        'ศ': 'D:\\pythonWa\\Letter\\38.jpg',
-        'ษ': 'D:\\pythonWa\\Letter\\39.jpg',
-        'ส': 'D:\\pythonWa\\Letter\\40.jpg',
-        'ห': 'D:\\pythonWa\\Letter\\41.jpg',
-        'ฬ': 'D:\\pythonWa\\Letter\\42.jpg',
-        'อ': 'D:\\pythonWa\\Letter\\43.jpg',
-        'ฮ': 'D:\\pythonWa\\Letter\\44.jpg'
+        'ก': 'D:\\KU KPS\\Comvision\\License Plate Recognition\\Letter\\01.jpg',
+        'ข': 'D:\\KU KPS\\Comvision\\License Plate Recognition\\Letter\\02.jpg',
+        'ฃ': 'D:\\KU KPS\\Comvision\\License Plate Recognition\\Letter\\03.jpg',
+        'ค': 'D:\\KU KPS\\Comvision\\License Plate Recognition\\Letter\\04.jpg',
+        'ฅ': 'D:\\KU KPS\\Comvision\\License Plate Recognition\\Letter\\05.jpg',
+        'ฆ': 'D:\\KU KPS\\Comvision\\License Plate Recognition\\Letter\\06.jpg',
+        'ง': 'D:\\KU KPS\\Comvision\\License Plate Recognition\\Letter\\07.jpg',
+        'จ': 'D:\\KU KPS\\Comvision\\License Plate Recognition\\Letter\\08.jpg',
+        'ฉ': 'D:\\KU KPS\\Comvision\\License Plate Recognition\\Letter\\09.jpg',
+        'ช': 'D:\\KU KPS\\Comvision\\License Plate Recognition\\Letter\\10.jpg',
+        'ซ': 'D:\\KU KPS\\Comvision\\License Plate Recognition\\Letter\\11.jpg',
+        'ฌ': 'D:\\KU KPS\\Comvision\\License Plate Recognition\\Letter\\12.jpg',
+        'ญ': 'D:\\KU KPS\\Comvision\\License Plate Recognition\\Letter\\13.jpg',
+        'ฎ': 'D:\\KU KPS\\Comvision\\License Plate Recognition\\Letter\\14.jpg',
+        'ฏ': 'D:\\KU KPS\\Comvision\\License Plate Recognition\\Letter\\15.jpg',
+        'ฐ': 'D:\\KU KPS\\Comvision\\License Plate Recognition\\Letter\\16.jpg',
+        'ฑ': 'D:\\KU KPS\\Comvision\\License Plate Recognition\\Letter\\17.jpg',
+        'ฒ': 'D:\\KU KPS\\Comvision\\License Plate Recognition\\Letter\\18.jpg',
+        'ณ': 'D:\\KU KPS\\Comvision\\License Plate Recognition\\Letter\\19.jpg',
+        'ด': 'D:\\KU KPS\\Comvision\\License Plate Recognition\\Letter\\20.jpg',
+        'ต': 'D:\\KU KPS\\Comvision\\License Plate Recognition\\Letter\\21.jpg',
+        'ถ': 'D:\\KU KPS\\Comvision\\License Plate Recognition\\Letter\\22.jpg',
+        'ท': 'D:\\KU KPS\\Comvision\\License Plate Recognition\\Letter\\23.jpg',
+        'ธ': 'D:\\KU KPS\\Comvision\\License Plate Recognition\\Letter\\24.jpg',
+        'น': 'D:\\KU KPS\\Comvision\\License Plate Recognition\\Letter\\25.jpg',
+        'บ': 'D:\\KU KPS\\Comvision\\License Plate Recognition\\Letter\\26.jpg',
+        'ป': 'D:\\KU KPS\\Comvision\\License Plate Recognition\\Letter\\27.jpg',
+        'ผ': 'D:\\KU KPS\\Comvision\\License Plate Recognition\\Letter\\28.jpg',
+        'ฝ': 'D:\\KU KPS\\Comvision\\License Plate Recognition\\Letter\\29.jpg',
+        'พ': 'D:\\KU KPS\\Comvision\\License Plate Recognition\\Letter\\30.jpg',
+        'ฟ': 'D:\\KU KPS\\Comvision\\License Plate Recognition\\Letter\\31.jpg',
+        'ภ': 'D:\\KU KPS\\Comvision\\License Plate Recognition\\Letter\\32.jpg',
+        'ม': 'D:\\KU KPS\\Comvision\\License Plate Recognition\\Letter\\33.jpg',
+        'ย': 'D:\\KU KPS\\Comvision\\License Plate Recognition\\Letter\\34.jpg',
+        'ร': 'D:\\KU KPS\\Comvision\\License Plate Recognition\\Letter\\35.jpg',
+        'ล': 'D:\\KU KPS\\Comvision\\License Plate Recognition\\Letter\\36.jpg',
+        'ว': 'D:\\KU KPS\\Comvision\\License Plate Recognition\\Letter\\37.jpg',
+        'ศ': 'D:\\KU KPS\\Comvision\\License Plate Recognition\\Letter\\38.jpg',
+        'ษ': 'D:\\KU KPS\\Comvision\\License Plate Recognition\\Letter\\39.jpg',
+        'ส': 'D:\\KU KPS\\Comvision\\License Plate Recognition\\Letter\\40.jpg',
+        'ห': 'D:\\KU KPS\\Comvision\\License Plate Recognition\\Letter\\41.jpg',
+        'ฬ': 'D:\\KU KPS\\Comvision\\License Plate Recognition\\Letter\\42.jpg',
+        'อ': 'D:\\KU KPS\\Comvision\\License Plate Recognition\\Letter\\43.jpg',
+        'ฮ': 'D:\\KU KPS\\Comvision\\License Plate Recognition\\Letter\\44.jpg'
 
     }
     patterns = {}
@@ -121,7 +121,7 @@ def load_character_patterns():
 
 def recognize_characters(projection, segments, char_patterns):
     results = []
-    threshold = 0.3  # Threshold for matching
+    threshold = 0.5  # Threshold for matching
     for start, end in segments:
         char_projection = projection[start:end]
         if len(char_projection) < 2:
@@ -202,12 +202,12 @@ def process_image(image_path):
 
 
 if __name__ == "__main__":
-    test01_path = "D:\\pythonWa\\test01.jpg"
+    test01_path = "D:\\KU KPS\\Comvision\\License Plate Recognition\\Test\\test01.jpg"
     process_image(test01_path)
-    test02_path = "D:\\pythonWa\\test02.png"
+    test02_path = "D:\\KU KPS\\Comvision\\License Plate Recognition\\Test\\test02.jpg"
     process_image(test02_path)
-    test03_path = "D:\\pythonWa\\test03.jpg"
+    test03_path = "D:\\KU KPS\\Comvision\\License Plate Recognition\\Test\\test03.jpg"
     process_image(test03_path)
-    test04_path = "D:\\pythonWa\\test04.jpg"
+    test04_path = "D:\\KU KPS\\Comvision\\License Plate Recognition\\Test\\test04.jpg"
     process_image(test04_path)
     
